@@ -1,0 +1,17 @@
+https://blog.csdn.net/tyro_java/article/details/51232458 
+https://blog.csdn.net/jingsi1991/article/details/71514106
+https://www.jianshu.com/p/28bca6529150
+2.1安装包nvm-setup.zip 下载地址： https://github.com/coreybutler/nvm-windows/releases
+2.2在D盘新建 nvm, nvmNode 两个文件夹，把 nvm-setup安装包解压出来,拷贝到nvm文件夹
+2.3点击 nvm-setup 安装包 安装，nvm的路径选新建的nvm的路径，node的路径选nvmNode的路径
+2.4在根目录生成一个settings.txt的文本文件，把这个文件剪切到D: nvm\nvm目录中，然后我们把它的内容修改成这样
+
+root:D:\nvm\nvm  path: D:\nvmNode\nodejs  arch: 64  proxy: none  node_mirror: http://npm.taobao.org/mirrors/node/  npm_mirror: https://npm.taobao.org/mirrors/npm/
+
+2.5 检查环境变量，计算机-属性-高级系统设置-环境变量，检查变量NVM_HOME 是否为D:\nvm\nvm，
+NVM_SYMLINK 是否为D:\nvmNode\nodejs，path 是否加上%NVM_HOME% 和%NVM_SYMLINK%
+如果没有的话，手动配置
+2.6 检测nvm安装是否成功，前端代码根目录打开命令窗口， 运行命令： nvm -v,， 如果有版本信息，说明已经安装成功
+2.7 使用nvm下载node ：nvm install [版本号] , 例如下载node 6.7.0,运行 nvm install 6.7.0
+使用node，运行：nvm use [版本号]，例如 nvm use 6.7.0
+2.8 前端代码根目录打开命令窗口 运行命令 node-v ，检查node是否成功切换对应的版本
